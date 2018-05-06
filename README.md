@@ -1,2 +1,2 @@
 # LeetCode
-Solution of leetCode.
+Solution of LeetCode.
