@@ -10,6 +10,8 @@
         "**.exe": true
     },
     "files.associations": {
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp"
     }
 }
