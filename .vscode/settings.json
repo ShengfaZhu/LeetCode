@@ -15,6 +15,7 @@
         "utility": "cpp",
         "cmath": "cpp",
         "cstdlib": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "iostream": "cpp"
     }
 }
