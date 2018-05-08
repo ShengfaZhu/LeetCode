@@ -16,6 +16,7 @@
         "cmath": "cpp",
         "cstdlib": "cpp",
         "limits": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
