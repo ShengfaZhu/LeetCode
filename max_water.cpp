@@ -11,26 +11,39 @@
 #include <algorithm>
 using namespace std;
 
+// int maxArea(vector<int>& height) {
+//     int max_area = 0;
+//     vector<int> area(height.size(), 0);
+//     for (int i = 0; i < height.size(); i ++) {
+//         int j = 0;
+//         for (; j < i; j++) {
+//             if (height.at(j) >= height.at(i))
+//                 break;
+//         }
+//         int left = height.at(i) * (i - j);
+//         j = height.size() - 1;
+//         for (; j > i; j--) {
+//             if (height.at(j) >= height.at(i))
+//                 break;
+//         }
+//         int right = height.at(i) * (j - i);
+//         int temp_max = max(left, right);
+//         max_area = max(max_area, temp_max);
+//     }
+//     return max_area;
+// }
+
+//another much faster verstion
 int maxArea(vector<int>& height) {
-    int max_area = 0;
-    vector<int> area(height.size(), 0);
-    for (int i = 0; i < height.size(); i ++) {
-        int j = 0;
-        for (; j < i; j++) {
-            if (height.at(j) >= height.at(i))
-                break;
-        }
-        int left = height.at(i) * (i - j);
-        j = height.size() - 1;
-        for (; j > i; j--) {
-            if (height.at(j) >= height.at(i))
-                break;
-        }
-        int right = height.at(i) * (j - i);
-        int temp_max = max(left, right);
-        max_area = max(max_area, temp_max);
+    int max_water = 0;
+    int i = 0, j = height.size() - 1;
+    while(i < j) {
+        int h = min(height[i], height[j]);
+        max_water = max(max_water, h * (j - i));
+        while(height[i] <= h && i < j) i++;
+        while(height[j] <= h && i < j) j--;
     }
-    return max_area;
+    return max_water;
 }
 
 int main() {
