@@ -17,6 +17,10 @@
         "cstdlib": "cpp",
         "limits": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "array": "cpp",
+        "istream": "cpp",
+        "streambuf": "cpp",
+        "tuple": "cpp"
     }
 }
