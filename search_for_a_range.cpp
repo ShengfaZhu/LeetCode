@@ -14,11 +14,11 @@ vector<int> searchRange(vector<int>& nums, int target) {
     vector<int> range(2, -1);
     if (nums.empty())
         return range;
-    if (nums.size() == 1 && nums[0]== target) {
-        return vector<int>(2, 0);
-    }
+    // if (nums.size() == 1 && nums[0]== target) {
+    //     return vector<int>(2, 0);
+    // }
     int low = 0, high = nums.size() - 1, ind = -1;
-    while(low < high) {
+    while(low <= high) {
         if (nums[low] == target) {
             ind = low;
             break;
