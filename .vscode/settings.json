@@ -35,6 +35,7 @@
         "system_error": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "vector": "cpp"
     }
 }
