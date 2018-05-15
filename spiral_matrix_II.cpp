@@ -43,7 +43,6 @@ vector<vector<int>> generateMatrix(int n) {
             j--;           
         }
     }
-    cout << "i : " << i << endl;
     if (i == (n - 1) / 2) {
         matrix[i][i] = array[p];
     }
