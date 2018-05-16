@@ -32,10 +32,10 @@ string getPermutation(int n, int k) {
     int i = n;
     while (res.size() < n) {
         int curr = k / factorial(i - 1);
-        cout << "curr : " << curr << endl;
+        // cout << "curr : " << curr << endl;
         res.push_back(str[curr]);
         str.erase(curr, 1);
-        cout << "str : " << str << endl;
+        // cout << "str : " << str << endl;
         k = k - curr * factorial(i - 1);
         i--;
     }
