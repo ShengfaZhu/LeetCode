@@ -1,6 +1,6 @@
 // Given a string containing only digits, restore it 
 // by returning all possible valid IP address combinations.
-// ip地址分为4部分，每部分数值为0-255
+// ip地址分为4部分，每部分数值为0-255,且由0开头，只能为0， 01,001为非法
 // Example:
 // Input: "25525511135"
 // Output: ["255.255.11.135", "255.255.111.35"]
