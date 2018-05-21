@@ -34,28 +34,6 @@ TreeNode *binaryTreeGenerate(vector<int> v)
 	return t;
 }
 
-// void preorder_traversal(TreeNode *head) {
-//     if (head == NULL) return;
-//     cout << head->val << "\t";
-//     preorder_traversal(head->left);
-//     preorder_traversal(head->right);
-// }
-
-// void inorder_traversal(TreeNode *head) {
-//     if (head == NULL) return;
-//     inorder_traversal(head->left);
-//     cout << head->val << "\t";
-//     inorder_traversal(head->right);
-// }
-
-
-// void postorder_traversal(TreeNode *head) {
-//     if (head == NULL) return;
-//     postorder_traversal(head->left);
-//     postorder_traversal(head->right);
-//     cout << head->val << "\t";
-// }
-
 void goAlongLeftBranch(TreeNode* x, stack<TreeNode*>& s)
 {
     while(x) 
@@ -78,6 +56,15 @@ vector<int> inorderTraversal(TreeNode* root)
         root = root->right;
     }
     return ans;
+}
+
+bool isValidBST(TreeNode* root) {
+    vector<int> ans = inorderTraversal(root);
+    for (int i = 1; i < ans.size(); i++) {
+        if (ans[i] <= ans[i - 1])
+            return false;
+    }
+    return true;    
 }
 
 int main() {
