@@ -38,6 +38,7 @@
         "bitset": "cpp",
         "vector": "cpp",
         "set": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "deque": "cpp"
     }
 }
