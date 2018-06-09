@@ -19,6 +19,7 @@ int rob_helper(vector<int>& nums, int low, int high) {
 }
 
 int rob(vector<int>& nums) {
+    if (nums.size() == 1) return nums[0];
     int r1 = rob_helper(nums, 0, nums.size() - 2);
     int r2 = rob_helper(nums, 1, nums.size() - 1);
     cout << r1 << "\t" << r2 << endl;
