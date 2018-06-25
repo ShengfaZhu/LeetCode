@@ -41,6 +41,9 @@
         "stack": "cpp",
         "deque": "cpp",
         "unordered_map": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "fstream": "cpp",
+        "numeric": "cpp",
+        "sstream": "cpp"
     }
 }
