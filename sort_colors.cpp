@@ -9,7 +9,7 @@
 using namespace std;
 
 // counting sort
-void sortColors(vector<int>& nums) {
+/* void sortColors(vector<int>& nums) {
     if (nums.empty())
         return;
     vector<int> count(3, 0);// 0, 1, 2
@@ -26,10 +26,21 @@ void sortColors(vector<int>& nums) {
             count[j]--;
         }
     }
+} */
+
+// 3-way partition
+void sortColors(vector<int>& nums) {
+    if (nums.empty()) return;
+    int i = 0, low = 0, high = nums.size() - 1;
+    while (i <= high) {
+        if (nums[i] == 1) i++;
+        else if (nums[i] == 0) swap(nums[i++], nums[low++]);
+        else swap(nums[i], nums[high--]);
+    }
 }
 
 int main() {
-    vector<int> num = {1, 2};
+    vector<int> num = {1, 2, 1, 0, 0, 2, 1, 1};
     sortColors(num);
     for (int& i : num)
         cout << i << "\t";
