@@ -33,4 +33,4 @@
 
 # test file
 test.cpp
-.vscode/ipch/*
+.vscode/ipch
