@@ -45,6 +45,7 @@
         "fstream": "cpp",
         "numeric": "cpp",
         "sstream": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "thread": "cpp"
     }
 }
